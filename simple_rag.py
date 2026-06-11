@@ -93,8 +93,8 @@ from openai import OpenAI
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
-openai.api_key = 'sk-or-v1-86ad8b124c26dd4671fe1348cd941888b174961232199c7d629fe1'
-openai_client = OpenAI(api_key=openai.api_key)
+openai.api_key = 'sk-or-v1-86ad8b124c26dd4671fe1348c7d629fe1'
+openai_client = OpenAI(api_key=openai.api_key, base_url="https://openrouter.ai/api/v1")
 
 def rag(query, retrieved_documents, model="gpt-4o-mini"):
     information = "\n\n".join(retrieved_documents)
@@ -119,14 +119,8 @@ output = rag(query=query, retrieved_documents=retrieved_documents)
 
 print(word_wrap(output))
 
-import os
-import openai
-from openai import OpenAI
 
-from dotenv import load_dotenv, find_dotenv
-_ = load_dotenv(find_dotenv()) # read local .env file
-openai.api_key = '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'
-openai_client = OpenAI(api_key=openai.api_key, base_url="https://openrouter.ai/api/v1")
+
 
 
 
