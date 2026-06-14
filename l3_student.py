@@ -106,7 +106,7 @@ from openai import OpenAI
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv()) # read local .env file
-openai.api_key = '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'
+openai.api_key = 'sk-or-v1-86ad8b32199c7d629fe1'
 openai_client = OpenAI(api_key=openai.api_key, base_url="https://openrouter.ai/api/v1")
 
 import umap
